@@ -1,27 +1,28 @@
-# Homogmos Lab
+# Homogmos Lab v1.0
 
-Sitio web de **Homogmos Lab**, una estación independiente de biología computacional enfocada en bioinformática, genómica evolutiva, evolución molecular, ciencia de datos biológicos, software científico e historia natural computacional.
+**Exploring Genomes. Finding Life.**
 
-## Publicar con GitHub Pages
+Static multi-page site for GitHub Pages.
 
-1. Sube `index.html`, `style.css` y este `README.md` a la raíz del repositorio.
-2. En GitHub: **Settings → Pages → Build and deployment → Deploy from a branch**.
-3. Selecciona `main` y `/ (root)`.
-4. Guarda los cambios.
+## Publish
+1. Upload all files and folders to the root of your `homogmos-lab` repository.
+2. GitHub → Settings → Pages → Deploy from a branch.
+3. Select `main` and `/ (root)`.
 
-## Agregar la foto del fundador
-
-1. Sube una foto vertical a la raíz del repositorio y llámala `founder-photo.jpg`.
-2. En `index.html`, busca `founder-photo-placeholder`.
-3. Sustituye ese bloque por:
+## Add founder photo
+Place a portrait at `assets/founder-photo.jpg`, then in `behind-the-lab/index.html` replace the `photo-placeholder` div with:
 
 ```html
-<img class="founder-photo" src="founder-photo.jpg" alt="Guillermo Gerardo Hernández Robles">
+<img class="profile-photo" src="../assets/founder-photo.jpg" alt="Guillermo Hernández">
 ```
 
-Tamaño recomendado: **1200 × 1500 px** o cualquier fotografía vertical con proporción aproximada 4:5.
+## Main structure
+- `manifesto/`
+- `research/` and individual research pages
+- `projects/` and individual project pages
+- `software/`
+- `exploration-log/`
+- `behind-the-lab/`
+- `collaborate/`
 
-## Field Journal — primer tema sugerido
-
-**Un genoma no tiene una sola historia**  
-Una introducción a genealogías locales, TMRCA y heterogeneidad genómica: por qué distintas regiones de un mismo genoma pueden conservar pasados evolutivos distintos.
+No CV is linked or embedded in the site.
