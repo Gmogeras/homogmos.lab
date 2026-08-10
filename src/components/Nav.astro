@@ -1,0 +1,15 @@
+---
+const base = import.meta.env.BASE_URL;
+const path = Astro.url.pathname;
+const links = [
+  ['Manifesto','manifesto/'],['Research','research/'],['Projects','projects/'],['Software','software/'],
+  ['Exploration Log','exploration-log/'],['Behind the Lab','behind-the-lab/'],['Collaborate','collaborate/']
+];
+const href = (p='') => `${base}${p}`;
+---
+<header>
+  <a class="brand" href={href()} aria-label="Homogmos Lab home">HOMOGMOS<span>_LAB</span><small>Exploring Genomes. Finding Life.</small></a>
+  <nav aria-label="Primary navigation">
+    {links.map(([label, route]) => <a class={path.includes(`/${route}`) ? 'active' : ''} href={href(route)}>{label}</a>)}
+  </nav>
+</header>
