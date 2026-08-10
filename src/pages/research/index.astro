@@ -1,0 +1,14 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+const base=import.meta.env.BASE_URL;
+const items=[
+['R01','Evolutionary Genomics','How selection, drift, recombination, demography and gene flow leave uneven signatures across genomes.','evolutionary-genomics/'],
+['R02','Genomic Architecture & Local Genealogies','How many distinct evolutionary histories can coexist inside a single genome, and how are they distributed across chromosomes?','genomic-architecture/'],
+['R03','Population Genomics','Diversity, structure, demographic history, divergence and admixture from genome-scale data.','population-genomics/'],
+['R04','Paleogenomics & Deep-Time Biology','Reconstructing populations and evolutionary processes from ancient DNA and temporally structured evidence.','paleogenomics/'],
+['R05','Mitonuclear Evolution','Discordance, coalescent timing and the conditions under which mitochondrial and nuclear histories agree—or do not.','mitonuclear-evolution/'],
+['R06','Computational Natural History','Connecting biodiversity, fossils, maps, phylogenies and genomes through digital tools and scientific storytelling.','computational-natural-history/']];
+---
+<PageLayout title="Research" kicker="RESEARCH // current questions" lead="The laboratory is organized around questions rather than techniques. These lines overlap deliberately: evolutionary history rarely respects departmental boundaries.">
+<section><div class="list-stack">{items.map(([code,title,text,route]) => <a class="list-row" href={`${base}research/${route}`}><span class="code">{code}</span><div><h3>{title}</h3><p>{text}</p></div><span class="arrow">open →</span></a>)}</div></section>
+</PageLayout>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from './BaseLayout.astro';
+interface Props { title:string; description?:string; kicker?:string; lead?:string; }
+const { title, description, kicker='HOMOGMOS LAB', lead } = Astro.props;
+---
+<BaseLayout title={title} description={description}>
+<main>
+  <div class="breadcrumbs"><a href={import.meta.env.BASE_URL}>~/homogmos-lab</a> / {title.toLowerCase().replaceAll(' ','-')}</div>
+  <section class="page-hero">
+    <p class="kicker">{kicker}</p><h1>{title}</h1>{lead && <p class="lead">{lead}</p>}
+  </section>
+  <slot />
+</main>
+</BaseLayout>
